@@ -1,5 +1,6 @@
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 import { Popover, Transition } from "@headlessui/react";
+import VideoModal from "./VideoModal";
 
 const menu = [
   {
@@ -21,6 +22,7 @@ const menu = [
 ];
 
 export default function Header() {
+  const [openModal, setOpenModal] = useState(false);
   return (
     <Popover className="relative">
       <div className="max-w-7xl mx-auto px-4">
@@ -35,22 +37,33 @@ export default function Header() {
             as="nav"
             className="hidden md:flex items-center space-x-10"
           >
-            {menu.map((item, index) => (
-              <div
-                key={index}
-                className="px-2.5 py-1.5 rounded-full hover:bg-gray-100 transition-all duration-100 group"
+            <button className="px-2.5 py-1.5 rounded-full hover:bg-gray-100 transition-all duration-100 group">
+              <a
+                href="#"
+                className="text-sm font-normal tracking-[0.25em] ray-5hover:text-gray-900"
               >
-                <a
-                  href={item.href}
-                  className="text-sm group-hover:drop-shadow-md font-normal tracking-[0.25em] ray-5hover:text-gray-900"
-                >
-                  {item.name}
-                </a>
-              </div>
-            ))}
+                HOME
+              </a>
+            </button>
+            <button
+              className="px-2.5 py-1.5 rounded-full hover:bg-gray-100 text-sm font-normal tracking-[0.25em] ray-5hover:text-gray-900 transition-all duration-100 group"
+              onClick={() => setOpenModal(true)}
+            >
+              THE C6
+            </button>
+            <button className="px-2.5 py-1.5 rounded-full hover:bg-gray-100 transition-all duration-100 group">
+              <a
+                href="#"
+                className="text-sm font-normal tracking-[0.25em] ray-5hover:text-gray-900"
+              >
+                MANIFESTO
+              </a>
+            </button>
           </Popover.Group>
         </div>
       </div>
+
+      <VideoModal open={openModal} setOpen={setOpenModal} />
 
       {/* <Transition
         as={Fragment}
