@@ -25,7 +25,7 @@ export default function Header() {
   const [openModal, setOpenModal] = useState(false);
   return (
     <Popover className="relative">
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-7xl mx-auto">
         <div className="flex items-center py-5 justify-end md:space-x-10">
           {/* <div className="md:hidden">
             <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none">
@@ -59,6 +59,21 @@ export default function Header() {
                 MANIFESTO
               </a>
             </button>
+          </Popover.Group>
+          <Popover.Group
+            as="nav"
+            className="hidden md:flex items-center space-x-2"
+          >
+            <div className="px-2.5 py-1.5 rounded-full hover:bg-gray-100 transition-all duration-100">
+              <a href="" target="_blank" rel="noreferrer">
+                <img src="/assets/twitter.svg" className="w-7" alt="twitter" />
+              </a>
+            </div>
+            <div className="px-2.5 py-1.5 rounded-full hover:bg-gray-100 transition-all duration-100">
+              <a href="" target="_blank" rel="noreferrer">
+                <img src="/assets/discord.svg" className="w-8" alt="discord" />
+              </a>
+            </div>
           </Popover.Group>
         </div>
       </div>
