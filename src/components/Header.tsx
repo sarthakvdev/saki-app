@@ -24,7 +24,7 @@ export default function Header() {
   return (
     <Popover className="relative">
       <div className="max-w-7xl mx-auto px-4">
-        <div className="flex items-center py-8 justify-end md:space-x-10">
+        <div className="flex items-center py-5 justify-end md:space-x-10">
           {/* <div className="md:hidden">
             <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none">
               <span className="sr-only">Open menu</span>

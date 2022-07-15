@@ -8,3 +8,11 @@
     src: url("/assets/fonts/Sequel100Black-105.ttf") format("truetype");
   }
 }
+
+.bkg {
+  background-image: url('/assets/saki-bg.png');
+  background-color: #F1F1F1;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}

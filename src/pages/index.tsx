@@ -6,7 +6,7 @@ import Home from "../components/Home";
 
 const Index: NextPage = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bkg">
       <Header />
       <Home />
     </div>
