@@ -22,9 +22,9 @@ const menu = [
 
 export default function Header() {
   return (
-    <Popover className="relative bg-white">
+    <Popover className="relative">
       <div className="max-w-7xl mx-auto px-4">
-        <div className="flex items-center py-8 border justify-end md:space-x-10">
+        <div className="flex items-center py-8 justify-end md:space-x-10">
           {/* <div className="md:hidden">
             <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none">
               <span className="sr-only">Open menu</span>
@@ -36,13 +36,17 @@ export default function Header() {
             className="hidden md:flex items-center space-x-10"
           >
             {menu.map((item, index) => (
-              <a
+              <div
                 key={index}
-                href={item.href}
-                className="text-sm font-normal tracking-[0.25em] ray-5hover:text-gray-900"
+                className="px-2.5 py-1.5 rounded-full hover:bg-gray-100 transition-all duration-100 group"
               >
-                {item.name}
-              </a>
+                <a
+                  href={item.href}
+                  className="text-sm group-hover:drop-shadow-md font-normal tracking-[0.25em] ray-5hover:text-gray-900"
+                >
+                  {item.name}
+                </a>
+              </div>
             ))}
           </Popover.Group>
         </div>

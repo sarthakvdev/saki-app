@@ -6,11 +6,9 @@ import Home from "../components/Home";
 
 const Index: NextPage = () => {
   return (
-    <div className="border border-blue-400 min-h-screen">
+    <div className="min-h-screen">
       <Header />
-      <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
-        <Home />
-      </main>
+      <Home />
     </div>
   );
 };
