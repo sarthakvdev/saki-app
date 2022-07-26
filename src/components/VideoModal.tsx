@@ -30,7 +30,7 @@ export default function VideoModal({ open, setOpen }) {
               leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
             >
               <Dialog.Panel className="relative bg-white overflow-visible shadow-xl transform transition-all sm:max-w-full sm:w-full">
-                <div className="hidden sm:block absolute -top-16 right-0 pt-4 pr-4 z-10">
+                <div className="absolute -top-16 right-0 pt-4 pr-2 sm:pr-4 z-10">
                   <div className="flex">
                     <button
                       type="button"
@@ -38,7 +38,7 @@ export default function VideoModal({ open, setOpen }) {
                       onClick={() => setOpen(false)}
                     >
                       <span className="sr-only">Close</span>
-                      <XIcon className="h-6 w-6" aria-hidden="true" />
+                      <XIcon className="w-4 sm:w-6" aria-hidden="true" />
                     </button>
                   </div>
                 </div>
