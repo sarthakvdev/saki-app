@@ -6,8 +6,8 @@ import Home from "../components/Home";
 
 const Index: NextPage = () => {
   return (
-    <div className="flex flex-col min-h-screen w-full text-neutral-900 transition bkg">
-      <div className="flex flex-col flex-1">
+    <div className="flex flex-col min-h-screen w-full text-neutral-900 bkg">
+      <div className="flex flex-col">
         <Header />
         <Home />
       </div>

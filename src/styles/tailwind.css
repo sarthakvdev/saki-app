@@ -7,6 +7,9 @@
     font-family: "SequelBlack";
     src: url("/assets/fonts/Sequel100Black-105.ttf") format("truetype");
   }
+  .navbar-button {
+    @apply -m-3 py-3 px-5 flex items-center rounded-md active:bg-gray-100 text-sm font-medium text-gray-900 tracking-[0.1em];
+  }
 }
 
 .bkg {
