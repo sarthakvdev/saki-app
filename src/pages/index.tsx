@@ -5,7 +5,7 @@ import Home from "../components/Home";
 
 const Index: NextPage = () => {
   return (
-    <div className="flex flex-col w-full text-neutral-900 bkg">
+    <div className="flex flex-col border border-red-500 text-neutral-900 bkg">
       <div className="relative flex flex-col min-h-screen">
         <Header />
         <Home />
