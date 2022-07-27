@@ -1,31 +1,11 @@
 import { Fragment, useState } from "react";
-import { Popover, Transition } from "@headlessui/react";
-import VideoModal from "./VideoModal";
-import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import { useRouter } from "next/router";
-
-type MenuType = {
-  name: string;
-  href: string;
-};
-
-const menu: MenuType[] = [
-  {
-    name: "HOME",
-    href: "/",
-  },
-  {
-    name: "THE C6",
-    href: "https://tailwindcss.com/docs/responsive-design",
-  },
-  {
-    name: "MANIFESTO",
-    href: "",
-  },
-];
+import { Popover, Transition } from "@headlessui/react";
+import { MenuIcon, XIcon } from "@heroicons/react/outline";
+import VideoModal from "./VideoModal";
 
 export default function Header() {
-  const [openModal, setOpenModal] = useState(false);
+  const [openModal, setOpenModal] = useState<boolean>(false);
   const router = useRouter();
   return (
     <Popover className="relative">

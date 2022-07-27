@@ -1,8 +1,13 @@
-import { Fragment, useState } from "react";
+import { Fragment } from "react";
 import { Dialog, Transition } from "@headlessui/react";
-import { ExclamationIcon, XIcon } from "@heroicons/react/outline";
+import { XIcon } from "@heroicons/react/outline";
 
-export default function VideoModal({ open, setOpen }) {
+type VideoModalType = {
+  open: boolean;
+  setOpen: (value: boolean) => void;
+}
+
+export default function VideoModal({ open, setOpen }: VideoModalType) {
   return (
     <Transition.Root show={open} as={Fragment}>
       <Dialog as="div" className="relative z-10" onClose={setOpen}>
